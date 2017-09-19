@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gstcalc.MainActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="cursive"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/focus"
+        android:ems="10"
+        android:hint="Enter values here"
+        android:inputType="number"
+        android:text="200"
+        android:textAlignment="center"
+        android:layout_weight="0.12">
+
+    </EditText>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText2"
+        android:id="@+id/radioGroup">
+
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editText2"
+            android:checked="true"
+            android:text="GST 5%" />
+
+        <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/radioButton"
+        android:layout_below="@+id/radioButton"
+        android:text="GST 12 %" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton2"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:text="GST 18 %" />
+
+    <RadioButton
+        android:id="@+id/radioButton4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:text="GST 28%"
+        android:layout_below="@+id/radioButton3" />
+</RadioGroup>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate " />
+
+    <TextView
+        android:id="@+id/marquetxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:text="              News related to GST                                                             "  />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="263dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="166dp"
+                android:onClick="btnclk"
+                android:layout_height="match_parent"
+                android:background="@drawable/greenback"
+                android:text="5%" />
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="166dp"
+                android:background="@drawable/blueback"
+                android:onClick="btnclk"
+                android:layout_height="match_parent"
+                android:text="12%" />
+            <Button
+                android:id="@+id/button3"
+                android:onClick="btnclk"
+                android:layout_width="166dp"
+                android:background="@drawable/redback"
+                android:layout_height="match_parent"
+                android:padding="10dip"
+                android:text="18%" />
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="166dp"
+                android:layout_height="match_parent"
+                android:onClick="btnclk"
+                android:background="@drawable/yellowback"
+
+                android:text="28%0" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

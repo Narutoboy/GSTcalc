@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GSTcalc</string>
+    <string name="action_exit">Exit</string>
+</resources>
